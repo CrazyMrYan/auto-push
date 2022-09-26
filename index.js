@@ -10,7 +10,7 @@ schedule.scheduleJob('30 * * * * *', async () => {
     await editFile();
     implementShell('git add .', console.log)
     implementShell('git commit -m "feat: 自动推送"', console.log)
-    implementShell('git push -u origin master', console.log)
+    implementShell('git push -u origin main', console.log)
 
 });
 
