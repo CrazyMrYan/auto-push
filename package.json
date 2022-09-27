@@ -1,7 +1,7 @@
 {
   "name": "auto-push-code",
   "version": "1.0.0",
-  "script": {
+  "scripts": {
     "dev": "nodemon index.js"
   },
   "main": "index.js",
