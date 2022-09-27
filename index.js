@@ -6,7 +6,7 @@ const moment = require('moment');
 const newDate = () => moment().format('YYYY-MM-DD HH:mm:ss');
 
 
-schedule.scheduleJob('30 * * * * *', async () => {
+schedule.scheduleJob('0 4 9 * * *', async () => {
     await editFile();
     implementShell('git add .', console.log)
     implementShell('git commit -m "feat: 自动推送"', console.log)
