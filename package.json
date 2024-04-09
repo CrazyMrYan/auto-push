@@ -2,7 +2,8 @@
   "name": "auto-push-code",
   "version": "1.0.0",
   "scripts": {
-        "dev": "pm2 start node index.js --name auto-github-push -- start"
+    "dev": "pm2 start index.js --name auto-github-push --watch",
+    "stop": "pm2 delete auto-github-push"
   },
   "main": "index.js",
   "license": "MIT",
