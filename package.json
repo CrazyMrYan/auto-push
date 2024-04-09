@@ -2,7 +2,7 @@
   "name": "auto-push-code",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon index.js"
+        "dev": "pm2 start node index.js --name auto-github-push -- start"
   },
   "main": "index.js",
   "license": "MIT",
