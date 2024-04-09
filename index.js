@@ -1,7 +1,7 @@
 const schedule = require('node-schedule');
 const child_process = require('child_process');
 const fs = require('fs');
-const FILE_PATH = `${__dirname}/README.md`
+const FILE_PATH = `${__dirname}/content/README.md`
 const moment = require('moment');
 const newDate = () => moment().format('YYYY-MM-DD HH:mm:ss');
 
