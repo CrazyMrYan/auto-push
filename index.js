@@ -55,4 +55,4 @@ const editFile = () => {
 }
 start()
 
-schedule.scheduleJob('25 0 * * * *', start);
+schedule.scheduleJob('29 * * * * *', start);
