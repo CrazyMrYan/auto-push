@@ -53,6 +53,5 @@ const editFile = () => {
         });
     })
 }
-start()
 
 schedule.scheduleJob('0 20 * * * *', start);
