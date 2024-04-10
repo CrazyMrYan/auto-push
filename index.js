@@ -6,12 +6,14 @@ const moment = require('moment');
 const newDate = () => moment().format('YYYY-MM-DD HH:mm:ss');
 
 
-schedule.scheduleJob('0 0 * * * *', async () => {
+const start = async () => {
     await editFile();
     await implementShell('git add .', console.log)
     await implementShell('git commit -m "feat: 自动推送"', console.log)
     await implementShell('git push -u origin main', console.log)
-});
+}
+
+
 
 const implementShell = async (shell, callback) => {
     callback(`[${newDate()}] ${shell}`)
@@ -51,4 +53,6 @@ const editFile = () => {
         });
     })
 }
+start()
 
+schedule.scheduleJob('25 0 * * * *', start);
