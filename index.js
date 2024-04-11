@@ -29,7 +29,7 @@ const implementShell = async (shell, callback) => {
                 callback(`[${newDate()}] ${data} 【SUCCUESS】${shell}`)
             })
             sh.stderr.on('data', (error) => {
-                callback(`[${newDate()}] - 【ERROR】 ${shell} - [${error} ]`)
+                callback(`[${newDate()}] - 【ERROR】 ${shell} - [${error} line-32 ]`)
             })
         } catch (error) {
             callback(`[${newDate()}] - 【ERROR】 ${shell} - [${error} `)
