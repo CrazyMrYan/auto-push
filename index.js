@@ -14,7 +14,6 @@ const start = async () => {
 }
 
 
-
 const implementShell = async (shell, callback) => {
     callback(`[${newDate()}] ${shell}`)
     return new Promise((resolve, reject) => {
@@ -27,13 +26,13 @@ const implementShell = async (shell, callback) => {
                 resolve()
             });
             sh.stdout.on('data', (data) => {
-                callback(`[${newDate()}] ${data}`)
+                callback(`[${newDate()}] ${data} 【SUCCUESS】${shell}`)
             })
             sh.stderr.on('data', (error) => {
-                callback(`[${newDate()}] ${error}`)
+                callback(`[${newDate()}] - 【ERROR】 ${shell} - [${error} ]`)
             })
         } catch (error) {
-            callback(`[${newDate()}] ${error}`)
+            callback(`[${newDate()}] - 【ERROR】 ${shell} - [${error} `)
             reject(error)
         }
     })
@@ -55,3 +54,4 @@ const editFile = () => {
 }
 
 schedule.scheduleJob('0 20 * * * *', start);
+start()
