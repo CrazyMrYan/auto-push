@@ -8,7 +8,7 @@ const newDate = () => moment().format('YYYY-MM-DD HH:mm:ss');
 
 const start = async () => {
     await editFile();
-    await implementShell('git pull', console.log)
+    // await implementShell('git pull', console.log)
     await implementShell('git add .', console.log)
     await implementShell('git commit -m "feat: 自动推送"', console.log)
     await implementShell('git push -u origin main', console.log)
